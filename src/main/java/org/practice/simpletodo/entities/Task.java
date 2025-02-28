@@ -28,7 +28,6 @@ public class Task extends BaseEntity {
     @NotNull(message = "Task must have a priority")
     private TaskPriority priority;
 
-    
     private LocalDate startedDate;
 
     private LocalDate dueDate;
