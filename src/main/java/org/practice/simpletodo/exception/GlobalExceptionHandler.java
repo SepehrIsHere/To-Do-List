@@ -26,4 +26,24 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleUserNotFoundException(UserNotFoundException ex) {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
+
+    @ExceptionHandler(InvalidTaskValues.class)
+    public ResponseEntity<String> handleInvalidTaskValues(InvalidTaskValues ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(TaskOperationException.class)
+    public ResponseEntity<String> handleTaskOperationException(TaskOperationException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(TaskNotFoundException.class)
+    public ResponseEntity<String> handleTaskNotFoundException(TaskNotFoundException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
+
+    @ExceptionHandler(InvalidPriorityException.class)
+    public ResponseEntity<String> handleInvalidPriorityException(InvalidPriorityException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 }
